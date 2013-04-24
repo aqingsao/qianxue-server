@@ -1,12 +1,5 @@
 
-# require 'rubygems'
-# require 'bundler/setup'
-# require 'sinatra/base'
-# require 'dm-core'
-# require 'dm-core'
-# require 'dm-validations'
-# require 'slim'
-require File.join(File.dirname(__FILE__), 'base-resource')
+require File.join(File.dirname(__FILE__), 'base_resource')
 
 class Todo
   include DataMapper::Resource
