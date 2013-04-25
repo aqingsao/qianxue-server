@@ -1,17 +1,16 @@
 # require "#{File.dirname(__FILE__)}/spec_helper"
 require File.join(File.dirname(__FILE__), "spec_helper")
 
-module My
-	class BooksResourceTest < Test::Unit::TestCase
-	  include Rack::Test::Methods
+describe "books" do
+  include Rack::Test::Methods
 
-	  def app
-	    My::BooksResource
-	  end
+  def app
+    My::BooksResource
+  end
 
-	  def test_should_return_empty_when_there_are_no_books
-	    get '/books'
-	    assert_equal '[]', last_response.body
-	  end
-	end
+  it 'return empty books when there are none' do
+    get '/books'
+    last_response.should be_ok
+    last_response.body.should == '[]'
+  end
 end
