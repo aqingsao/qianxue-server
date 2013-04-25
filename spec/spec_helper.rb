@@ -14,4 +14,8 @@ Sinatra::Base.set :environment, :test
 
 DataMapper.setup(:default, 'sqlite::memory:')
 
+RSpec.configure do |conf|
+  conf.include Rack::Test::Methods
+end
+
 Dir.glob(File.join(File.dirname(__FILE__), "../app/*_resource.rb")).each{|file| require file}
