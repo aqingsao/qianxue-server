@@ -3,6 +3,10 @@ require 'bundler/setup'
 require 'sinatra/base'
 require 'sinatra/json'
 require 'sinatra/json'
+require 'dm-core'
+require 'dm-validations'
+require 'dm-sqlite-adapter'
+
 Dir.glob(File.join(File.dirname(__FILE__), "*_resource.rb")).each{|file| require file}
 
 class App < Sinatra::Base
