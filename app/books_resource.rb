@@ -1,5 +1,5 @@
 
-require File.join(File.dirname(__FILE__), 'model/book')
+require File.join(File.dirname(__FILE__), '../model/book')
   
 module Sinatra
 	module BooksResource

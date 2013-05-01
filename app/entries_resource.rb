@@ -1,5 +1,5 @@
 
-require File.join(File.dirname(__FILE__), 'model/entry')
+require File.join(File.dirname(__FILE__), '../model/entry')
 
 module Sinatra
   module EntriesResource
