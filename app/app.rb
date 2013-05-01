@@ -21,8 +21,7 @@ class App < Sinatra::Base
   end
 
   not_found do
-  	content_type :json
-  	"not found".to_json
+  	slim "not_found".to_sym
   end
 
   register Sinatra::BooksResource
