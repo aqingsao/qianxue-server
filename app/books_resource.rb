@@ -1,25 +1,22 @@
 
-require File.join(File.dirname(__FILE__), 'base_resource')
-
-module My
-  class Book
-    include DataMapper::Resource
-    property :id,         Serial
-    property :name,      String
-    property :created_at, DateTime
-    property :updated_at, DateTime
-
-    validates_presence_of :name
-  end
-
-  class BooksResource < BaseResource
-    get '/books/:id' do
-      @entry = Entry.find(:id)
-      'Hi'
-    end
-    get '/books' do
-    	@books=Book.all :order=>[:created_at]
-    	"[]"
-    end
-  end
+require File.join(File.dirname(__FILE__), 'model/book')
+  
+module Sinatra
+	module BooksResource
+	  def self.registered(app)
+		app.get '/books' do
+		  @books=Book.all :order=>[:created_at]
+		  "books"
+		end
+		# get '/' do
+		#   @books=Book.all :order=>[:created_at]
+		#   "books"
+		# end
+		# get '/books/:id' do
+		#   '/books/$params[:id]'
+		#   json []
+		# end
+	  end
+	end
+	register BooksResource
 end
