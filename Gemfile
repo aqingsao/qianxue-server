@@ -12,4 +12,5 @@ gem 'dm-migrations'
 group :test do
 	gem 'rack-test'
 	gem 'rspec'
+	gem 'rspec_api_documentation'
 end
