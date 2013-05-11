@@ -4,6 +4,6 @@ require 'sinatra/base'
 
 Bundler.require
 
-require File.join(File.dirname(__FILE__), "app/app.rb")
+Dir.glob(File.join(File.dirname(__FILE__), "app/*_resource.rb")).each{|file| require file}
 
-map('/'){run App}
+run Rack::Cascade.new([My::BooksResource, My::EntriesResource])

@@ -26,13 +26,13 @@ class App < Sinatra::Base
   end
 
   get '/template/:name' do
-    slim :index, :layout=>
+    slim :index
   end
 
   not_found do
   	slim "not_found".to_sym
   end
 
-  register Sinatra::BooksResource
-  register Sinatra::EntriesResource
+  register My::BooksResource
+  register My::EntriesResource
 end
