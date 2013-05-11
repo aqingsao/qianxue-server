@@ -6,7 +6,7 @@ describe "books" do
   end
 
   it 'return empty books when there are none' do
-    get '/books'
+    get '/api/books'
     last_response.should be_ok
     last_response.body.should == 'books'
   end

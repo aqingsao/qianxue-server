@@ -1,11 +1,5 @@
-require 'rubygems'
-require 'bundler/setup'
-require 'sinatra/base'
-require 'dm-core'
-require 'dm-validations'
-require 'dm-sqlite-adapter'
-require 'dm-migrations'
-require 'slim'
+
+require File.join(File.dirname(__FILE__), 'resource_helper')
 
 module My
   class BaseResource < Sinatra::Base
@@ -18,6 +12,10 @@ module My
       DataMapper.setup(:default, 'sqlite::memory:')
         # A MySQL connection:
         #DataMapper.setup(:default, 'mysql://user:password@hostname/database')
+    end
+
+    get '/template/:name' do
+      slim :index
     end
 
     not_found do
