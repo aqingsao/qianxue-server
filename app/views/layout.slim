@@ -1,13 +1,25 @@
 doctype html
 html
   head
-    title Slim Examples
-    meta name="keywords" content="template language"
+    title 千学网
+    meta name="keywords" content="千学网, 速记, 记忆, 考研政治, 政治考研"
+    meta name="description" content="考研政治速记的应用"
     meta name="author" content="author"
+
+    link rel="stylesheet" href="/css/application.css"
 
   body
     == yield
 
       
-    div id="footer"
-      | Copyright © 
+    footer
+      div.container-fluid
+        ul.clearfix
+          li: a href="/about" 关于我们
+          li: a href="/" 新浪微博
+          li: a href="/" 使用协议
+          li: a href="/privacy" 隐私条款
+        p
+          span "2013千学网版权所有"
+    
+    script type="text/javascript" src="/js/jquery-2.0.0.min.js")

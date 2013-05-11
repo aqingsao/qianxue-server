@@ -10,5 +10,8 @@ module My
     	@books=Book.all :order=>[:created_at]
         'books'
     end
+    get '/books' do
+      slim :books
+    end
   end
 end

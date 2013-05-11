@@ -12,8 +12,13 @@ module My
       DataMapper.setup(:default, 'sqlite::memory:')
         # A MySQL connection:
         #DataMapper.setup(:default, 'mysql://user:password@hostname/database')
+      # Skim::Engine.default_options[:use_asset] = true
     end
 
+    set :static, true
+    # set :public_folder, File.dirname(__FILE__) + '../public'
+    set :static_cache_control, [:public, :max_age => 300]
+   
     get '/template/:name' do
       slim "#{params[:name]}".to_sym
     end
