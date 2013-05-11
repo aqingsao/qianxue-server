@@ -15,7 +15,7 @@ module My
     end
 
     get '/template/:name' do
-      slim :index
+      slim "#{params[:name]}".to_sym
     end
 
     not_found do
