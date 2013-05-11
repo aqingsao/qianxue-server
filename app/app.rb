@@ -20,6 +20,15 @@ class App < Sinatra::Base
   	DataMapper.setup(:default, 'sqlite::memory:')
   end
 
+  before do
+    puts '[Params]'
+    p params
+  end
+
+  get '/template/:name' do
+    slim :index, :layout=>
+  end
+
   not_found do
   	slim "not_found".to_sym
   end
