@@ -4,6 +4,7 @@ require 'sinatra/base'
 require 'dm-core'
 require 'dm-validations'
 require 'dm-sqlite-adapter'
+require 'dm-migrations'
 require 'slim'
 
 module My
@@ -15,6 +16,8 @@ module My
 
     configure :production, :development do
       DataMapper.setup(:default, 'sqlite::memory:')
+        # A MySQL connection:
+        #DataMapper.setup(:default, 'mysql://user:password@hostname/database')
     end
 
     not_found do

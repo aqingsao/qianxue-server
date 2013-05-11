@@ -10,7 +10,7 @@ module My
     end
     get '/books' do
     	@books=Book.all :order=>[:created_at]
-    	"books"
+        'books'
     end
   end
 end

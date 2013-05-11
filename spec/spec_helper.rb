@@ -6,6 +6,7 @@ require 'sinatra'
 require 'dm-core'
 require 'dm-validations'
 require 'dm-sqlite-adapter'
+require 'dm-migrations'
 
 require 'rack/test'
 require 'rspec'

@@ -10,4 +10,13 @@ describe "books" do
     last_response.should be_ok
     last_response.body.should == 'books'
   end
+  # it 'return 1 books when there is 1' do
+  # 	book = Book.create(
+  # 		:name => 'first book'
+  # 	)
+
+  #   get '/books'
+  #   last_response.should be_ok
+  #   last_response.body.should == 'books'
+  # end
 end
