@@ -11,6 +11,7 @@ module My
         'books'
     end
     get '/books' do
+      p settings.static
       slim :books
     end
   end
