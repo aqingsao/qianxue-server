@@ -9,7 +9,22 @@ html
     link rel="stylesheet" href="/css/application.css"
 
   body
-    == yield
+    div.navbar.navbar-inverse
+      div.navbar-inner
+        div.container-fluid
+          a.brand href="/" 千学网
+          div.navbar-text.pull-right
+            a.button-orange href="/login" 登录
+            a.button-orange href="/signup" 注册
+          div.nav-collapse.collapse.clearfix
+            ul.nav.clearfix
+              li: a href="/" 首页
+              li.active: a href="/features/party" 使用场景
+              li: a href="/plan" 功能与价格
+              li: a href="/blogs" 团队博客
+    div.bg-wrap
+      div.container-fluid
+        == yield
 
       
     footer
@@ -20,6 +35,6 @@ html
           li: a href="/" 使用协议
           li: a href="/privacy" 隐私条款
         p
-          span "2013千学网版权所有"
+          span 2013千学网版权所有
     
     script type="text/javascript" src="/js/jquery-2.0.0.min.js")
