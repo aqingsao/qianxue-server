@@ -16,11 +16,22 @@ a {
 ul, ol {
 	padding: 0;
 	margin: 0 0 10px 25px;
+	list-style: none;
 }
 li {
 line-height: 20px;
 }
-
+h1, h2, h3, h4, h5, h6 {
+	margin: 10px 0;
+	font-family: inherit;
+	font-weight: bold;
+	line-height: 20px;
+	color: inherit;
+	text-rendering: optimizelegibility;
+}
+h1, h2, h3 {
+	line-height: 40px;
+}
 .container-fluid {
 	max-width: 940px;
 	margin: 0 auto;
@@ -29,6 +40,25 @@ line-height: 20px;
 }
 .row-fluid {
 	width: 940px;
+}
+.row-fluid [class*="span"] {
+	display: block;
+	width: 100%;
+	min-height: 30px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	margin-left: 2.5641%;
+}
+.row-fluid [class*="span"]:first-child {
+	margin-left: 0;
+}
+.row-fluid .span2 {
+	width: 14.52991%;
+}
+.row-fluid .span10 {
+	width: 82.90598%;
 }
 .pull-right {
 	float: right;
@@ -60,9 +90,10 @@ line-height: 20px;
 	float: left;
 	display: block;
 	margin-left: 3px;
+	margin-top: 35px;
 	width: 160px;
-	height: 80px;
-	font-size: 20px;
+	height: 45px;
+	font-size: 40px;
 	font-weight: 200;
 	color: #ff8533;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
@@ -126,7 +157,6 @@ line-height: 20px;
 
 .navbar-inverse .navbar-inner .nav-collapse.collapse {
 	margin-left: 15%;
-	margin-top: 24px;
 }
 .navbar .nav {
 	position: relative;
@@ -135,6 +165,7 @@ line-height: 20px;
 	float: left;
 	margin: 0 10px 0 0;
 	list-style: none;
+	top:24px;
 }
 .navbar .nav>li {
 	float: left;
@@ -156,7 +187,34 @@ line-height: 20px;
 .bg-wrap {
 	padding-bottom: 10%;
 	min-height: 680px;
-	background: url("new_site/bg-wrap.png") repeat;
+	background: url("/images/bg-wrap.png") repeat;
+}
+.bg-wrap h1 {
+	margin: 45px 0 20px 0;
+	font-size: 26px;
+}
+.bg-wrap .sidebar{
+	float: right;
+}
+.books{
+	margin-top: 5px;
+}
+.book{
+	border-top: 1px dashed #ddd;
+	padding: 20px 0 10px;
+}
+.book .pic{
+	float: left;
+	margin-right: 20px;
+}
+.book .info{
+	overflow: hidden;
+	zoom: 1;
+	color: #666;
+}
+.book h2.profile .title .description{
+	font-size: 14px;
+	color: #AAA;
 }
 /*End of body content*/
 /*For footer*/
