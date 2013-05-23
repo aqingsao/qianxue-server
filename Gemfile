@@ -16,6 +16,11 @@ group :test do
 	gem 'rspec'
 	gem 'rspec_api_documentation'
 end
+group :development do
+	gem 'pry'
+	gem 'pry-debugger'
+	gem 'pry-stack_explorer'
+end
 
 group :assets do
   # gem 'skim', :git => "https://github.com/Termina1/skim.git"
