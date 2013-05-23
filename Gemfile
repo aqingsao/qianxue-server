@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 gem 'sinatra', :github => "sinatra/sinatra"
 gem 'sinatra-contrib'
 gem 'slim'
-
+gem 'multi_json'
+gem 'oj'
 gem 'thin'
 
 gem 'data_mapper'

@@ -8,7 +8,7 @@ module My
     end
     get '/api/books' do
     	@books=Book.all :order=>[:created_at]
-        'books'
+      MultiJson.dump([])
     end
     get '/books' do
       p settings.static

@@ -70,6 +70,7 @@ GEM
     json (1.4.6)
     multi_json (1.7.3)
     mustache (0.99.4)
+    oj (2.0.13)
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
@@ -120,6 +121,8 @@ DEPENDENCIES
   dm-core
   dm-migrations
   dm-sqlite-adapter
+  multi_json
+  oj
   rack-test
   rspec
   rspec_api_documentation
