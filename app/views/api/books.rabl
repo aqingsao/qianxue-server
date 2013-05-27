@@ -1,2 +1,2 @@
 collection @books, :object_root => false
-attributes :id, :name
+attributes :id, :title, :subTitle

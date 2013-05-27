@@ -212,7 +212,7 @@ h1, h2, h3 {
 	zoom: 1;
 	color: #666;
 }
-.book h2.profile .title .description{
+.book h2.profile .title .subTitle{
 	font-size: 14px;
 	color: #AAA;
 }
