@@ -1,6 +1,6 @@
 div.row-fluid
   div.span12
-	h1 我的教材 (3本)  	  
+	h1 我的教材 (<span class='count'>0</span>本)  	  
 
 div.row-fluid
   div.span2.sidebar
@@ -20,3 +20,6 @@ div.row-fluid
 	          span.subTitle 孙如芬2013最新版
 	      div.progress 共649个条目，有127个需要复习
 	      div.summary 还有1025个人与您一起复习此书，您复习的总数战胜了87%的人
+
+- content_for :scripts do
+  script type="text/javascript" src="/js/app.js"

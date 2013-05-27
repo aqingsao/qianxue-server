@@ -12,7 +12,6 @@ module My
       render :rabl, :"api/books"
     end
     get '/books' do
-      p settings.static
       slim :books
     end
   end

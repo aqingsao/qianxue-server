@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'sinatra/base'
+require 'sinatra/content_for'
 require 'dm-core'
 require 'dm-validations'
 require 'dm-sqlite-adapter'
