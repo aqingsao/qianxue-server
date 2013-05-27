@@ -7,7 +7,7 @@ Bundler.require
 
 Dir.glob(File.join(File.dirname(__FILE__), "app/*_resource.rb")).each{|file| require file}
 
-use Rack::Static, :urls => ["/css", "/images", "js", "template"], :root => "public"
+use Rack::Static, :urls => ["/css", "/images", "/js", "/template"], :root => "public"
 
 Rabl.configure do |config|
   # Commented as these are defaults
