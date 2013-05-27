@@ -6,9 +6,10 @@ module My
       @entry = Entry.find(:id)
       'Hi'
     end
-    get '/api/books' do
+    get '/api/books', :provides => [:json] do
+      content_type :json
     	@books=Book.all :order=>[:created_at]
-      MultiJson.dump(@books)
+      render :rabl, :"api/books"
     end
     get '/books' do
       p settings.static
