@@ -2,7 +2,6 @@ require File.join(File.dirname(__FILE__), 'base_resource')
   
 module My
   class BooksResource < BaseResource
-    DataMapper.auto_migrate!
     get '/api/books/:id' do
       @entry = Entry.find(:id)
       'Hi'

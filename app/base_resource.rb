@@ -11,10 +11,8 @@ module My
     end
 
     configure :production, :development do
-      DataMapper.setup(:default, 'sqlite::memory:')
-        # A MySQL connection:
-        #DataMapper.setup(:default, 'mysql://user:password@hostname/database')
-      # Skim::Engine.default_options[:use_asset] = true
+     dbFile = File.expand_path(File.join(File.dirname(__FILE__), '../tmp/dev.db'))
+     DataMapper.setup(:default, 'sqlite://' + dbFile)
     end
     set :json_encoder, :to_json
 

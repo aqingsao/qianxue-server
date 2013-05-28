@@ -9,9 +9,9 @@ div.container-fluid(ng-controller="BooksCtrl")
 	  	  li Sample
 	  div.span10.content
 		ul.books
-		  li.book
+		  li.book(ng-repeat="book in books")
 		    div.pic
-	      	  a.nbg href="/book/1"
+	      	  a.nbg href="/book{{book.id}}1"
 	            img src="images/zhengzhi_01.png" width="90"
 		    div.info
 		      h2.profile
