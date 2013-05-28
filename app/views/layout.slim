@@ -23,7 +23,6 @@ html(ng-app='')
               li: a href="/plan" 功能与价格
               li: a href="/blogs" 团队博客
     div.bg-wrap
-      div.container-fluid
         == yield
 
       
@@ -39,5 +38,6 @@ html(ng-app='')
     
     script type="text/javascript" src="/js/jquery-2.0.0.min.js"
     script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"
+    script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"    
     script type="text/javascript" src="/js/app.js"
     == yield_content :scripts

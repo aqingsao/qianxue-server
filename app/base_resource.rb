@@ -16,7 +16,6 @@ module My
         #DataMapper.setup(:default, 'mysql://user:password@hostname/database')
       # Skim::Engine.default_options[:use_asset] = true
     end
-    DataMapper.auto_migrate!
     set :json_encoder, :to_json
 
     before /api\/*/ do
