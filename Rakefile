@@ -1,3 +1,5 @@
+#encoding: utf-8
+
 task :environment do
 	require File.join(File.dirname(__FILE__), 'load')
 end
@@ -6,7 +8,8 @@ namespace :data do
 	desc "load initial data"
 	task :load => 'db:migrate' do
 		Book.create({
-			title: 'Java Script'
+			title: 'JavaScript精粹',
+			subTitle: '2013 JavaScript力作'
 			})
 	end
 end
