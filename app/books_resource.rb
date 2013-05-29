@@ -2,9 +2,9 @@ require File.join(File.dirname(__FILE__), 'base_resource')
   
 module My
   class BooksResource < BaseResource
-    get '/api/books/:id' do
+    get '/api/book/:id' do
       @entry = Entry.find(:id)
-      'Hi'
+      render :rabl, :"api/book"
     end
     get '/api/books', :provides => [:json] do
       content_type :json
@@ -13,6 +13,9 @@ module My
     end
     get '/books' do
       slim :books
+    end
+    get '/book/:id' do
+      slim :book
     end
   end
 end

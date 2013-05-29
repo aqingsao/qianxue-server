@@ -10,7 +10,12 @@ namespace :data do
 		Book.create({
 			title: 'JavaScript精粹',
 			subTitle: '2013 JavaScript力作'
-			})
+		})
+		Book.create({
+			title: 'Ruby On Rails',
+			subTitle: '名师力作'
+		})
+
 	end
 end
 
