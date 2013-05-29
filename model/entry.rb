@@ -1,3 +1,5 @@
+require 'dm-serializer/to_json'
+
 class Entry
   include DataMapper::Resource
 

@@ -1,3 +1,5 @@
+require 'dm-serializer/to_json'
+
 class Book
   include DataMapper::Resource
 

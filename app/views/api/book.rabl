@@ -1,2 +1,2 @@
-object @book, :object_root => false
+object @book
 attributes :id, :title, :subTitle

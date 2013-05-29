@@ -1,11 +1,10 @@
-
 require File.join(File.dirname(__FILE__), 'resource_helper')
 
 module My
   class BaseResource < Sinatra::Base
     helpers Sinatra::ContentFor
+    helpers Sinatra::JSON
     
-    Rabl.register!
     configure :development do
       DataMapper::Logger.new($stdout, :debug)
     end
