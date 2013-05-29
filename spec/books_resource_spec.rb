@@ -14,11 +14,16 @@ describe "books" do
   end
   it 'return 1 books when there is 1' do
   	book = Book.create(
-  		:title => 'Java'
+  		:title => 'title', 
+      :subTitle => "sub title"
   	)
 
     get '/api/books'
     last_response.should be_ok
-    last_response.body.should == '[{"id":1,"title":"Java","subTitle":null}]'
+    actual = JSON.parse(last_response.body)
+    actual.length.should == 1
+    actual[0]["id"].should == book.id
+    actual[0]["title"].should == book.title
+    actual[0]["subTitle"].should == book.subTitle
   end
 end

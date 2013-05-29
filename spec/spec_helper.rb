@@ -2,6 +2,7 @@ require 'rubygems'
 require 'bundler'
 Bundler.setup(:default, :test)
 require 'sinatra'
+require 'json'
 
 require 'dm-core'
 require 'dm-validations'
