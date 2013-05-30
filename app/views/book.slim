@@ -1,7 +1,11 @@
 div.container-fluid(ng-controller="BookCtrl")
 	div.row-fluid
 	  div.span12
-		h1 {{book.title}}--{{book.subTitle}}
+		h1 
+		  span.title 
+		    | {{book.title}}
+		  span.subTitle
+		    | --{{book.subTitle}}
 	div.row-fluid
 	  div.span2.sidebar
 	  	h2 我的成就
@@ -16,8 +20,10 @@ div.container-fluid(ng-controller="BookCtrl")
 		    div.info
 		      h2.profile
 		        a.title href="/book/{{book.id}}" 
-		          | {{book.title}}
-		          span.subTitle {{book.subTitle}}
+		          span.title 
+		            | {{book.title}}
+		          span.subTitle 
+		            | {{book.subTitle}}
 		      div.progress 共649个条目，有127个需要复习
 		      div.summary 还有1025个人与您一起复习此书，您复习的总数战胜了87%的人
 - content_for :scripts do
