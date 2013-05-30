@@ -212,9 +212,23 @@ h1, h2, h3 {
 	zoom: 1;
 	color: #666;
 }
-.book h2.profile .title .subTitle{
-	font-size: 14px;
+.book .subTitle{
+	font-size: 70%;
 	color: #AAA;
+}
+
+.index-progress{
+	width: 343px;
+	height: 21px;
+	padding: 3px 5px 0 5px;
+	background: url(http://baicizhan.qiniudn.com/pack/assets/index_progress_box.png);
+	margin-top: 10px;
+}
+.index-progress p{
+	height: 18px;
+	background: url(http://baicizhan.qiniudn.com/pack/assets/index_progress.png);
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
 }
 /*End of body content*/
 /*For footer*/

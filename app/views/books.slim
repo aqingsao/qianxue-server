@@ -16,8 +16,10 @@ div.container-fluid(ng-controller="BooksCtrl")
 		    div.info
 		      h2.profile
 		        a.title href="/book/{{book.id}}" 
-		          | {{book.title}}
-		          span.subTitle --{{book.subTitle}}
+		          span.title 
+		            | {{book.title}}
+		          span.subTitle 
+		            | --{{book.subTitle}}
 		      div.progress 共649个条目，有127个需要复习
 		      div.summary 还有1025个人与您一起复习此书，您复习的总数战胜了87%的人
 - content_for :scripts do

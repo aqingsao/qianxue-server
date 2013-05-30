@@ -12,19 +12,18 @@ div.container-fluid(ng-controller="BookCtrl")
 	  	ul
 	  	  li Sample
 	  div.span10.content
-		ul.books
-		  li.book(ng-repeat="book in books")
-		    div.pic
-	      	  a.nbg href="/book/{{book.id}}"
-	            img src="images/zhengzhi_01.png" width="90"
-		    div.info
-		      h2.profile
-		        a.title href="/book/{{book.id}}" 
-		          span.title 
-		            | {{book.title}}
-		          span.subTitle 
-		            | {{book.subTitle}}
-		      div.progress 共649个条目，有127个需要复习
-		      div.summary 还有1025个人与您一起复习此书，您复习的总数战胜了87%的人
+		div 
+		  | 距离
+		  span.expected-date 2013-12-31
+		  | 日，还剩
+		  span.remain-date 49
+		  | 天
+		div.completion-status
+		  | 已完成：0/1000
+		  span.status-normal
+		div.index-progress
+		  p(style="width:1.1279311368358562%")
+		div.review
+		  | 抓紧复习
 - content_for :scripts do
   script type="text/javascript" src="/js/book.js"
