@@ -1,64 +1,8 @@
-body {
-	font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
-	font-size: 14px;
-	line-height: 20px;
-	color: #333;
-	margin: 0;
-	background-color: #fff;
-}
-p {
-	margin: 0 0 10px;
-}
-a {
-	color: #ff8533;
-	text-decoration: none;
-}
-ul, ol {
-	padding: 0;
-	margin: 0 0 10px 25px;
-	list-style: none;
-}
-li {
-line-height: 20px;
-}
-h1, h2, h3, h4, h5, h6 {
-	margin: 10px 0;
-	font-family: inherit;
-	font-weight: bold;
-	line-height: 20px;
-	color: inherit;
-	text-rendering: optimizelegibility;
-}
-h1, h2, h3 {
-	line-height: 40px;
-}
 .container-fluid {
 	max-width: 940px;
 	margin: 0 auto;
 	padding-right: 20px;
 	padding-left: 20px;
-}
-.row-fluid {
-	width: 940px;
-}
-.row-fluid [class*="span"] {
-	display: block;
-	width: 100%;
-	min-height: 30px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	float: left;
-	margin-left: 2.5641%;
-}
-.row-fluid [class*="span"]:first-child {
-	margin-left: 0;
-}
-.row-fluid .span2 {
-	width: 14.52991%;
-}
-.row-fluid .span10 {
-	width: 82.90598%;
 }
 .pull-right {
 	float: right;
