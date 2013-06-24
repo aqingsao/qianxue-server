@@ -1,13 +1,12 @@
 div.container-fluid(ng-controller="BooksCtrl")
 	div.row-fluid
-	  div.span12
-		h1 我的教材 (<span class='count'>{{books.length}}</span>本)  	  
-	div.row-fluid
-	  div.span2.sidebar
+	  div.span2.pull-right
 	  	h2 我的成就
 	  	ul
-	  	  li Sample
+	  	  li Sample 1
 	  div.span10.content
+		div.span12
+	 	  h1 我的教材 (<span class='count'>{{books.length}}</span>本)  	  
 		ul.books
 		  li.book(ng-repeat="book in books")
 		    div.pic
