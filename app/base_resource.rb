@@ -10,8 +10,8 @@ module My
     end
 
     configure :production, :development do
-     dbFile = File.expand_path(File.join(File.dirname(__FILE__), '../tmp/dev.db'))
-     DataMapper.setup(:default, 'sqlite://' + dbFile)
+      dbFile = File.expand_path(File.join(File.dirname(__FILE__), '../tmp/dev.db'))
+      DataMapper.setup(:default, 'sqlite://' + dbFile)
     end
     set :json_encoder, :to_json
 

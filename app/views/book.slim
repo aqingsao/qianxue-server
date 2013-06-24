@@ -4,8 +4,6 @@ div.container-fluid(ng-controller="BookCtrl")
 		h1 
 		  span.title 
 		    | {{book.title}}
-		  span.subTitle
-		    | --{{book.subTitle}}
 	div.row-fluid
 	  div.span2.sidebar
 	  	h2 我的成就
@@ -15,15 +13,16 @@ div.container-fluid(ng-controller="BookCtrl")
 		div 
 		  | 距离
 		  span.expected-date 2013-12-31
-		  | 日，还剩
+		  | 日，还剩 
 		  span.remain-date 49
-		  | 天
+		  |  天
 		div.completion-status
 		  | 已完成：0/1000
 		  span.status-normal
 		div.index-progress
 		  p(style="width:1.1279311368358562%")
 		div.review
-		  | 抓紧复习
+		  a.button-orange(href="/login")
+		    | 开始复习
 - content_for :scripts do
   script type="text/javascript" src="/js/book.js"
