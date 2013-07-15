@@ -36,7 +36,6 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-gem "slim-rails"
 gem 'thin'
 
 gem 'data_mapper'
