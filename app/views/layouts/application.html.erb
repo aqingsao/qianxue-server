@@ -12,31 +12,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="navbar navbar-inverse">
+  <header id="header" class="navbar navbar-inverse">
     <div class="navbar-inner">
       <div class="container-fluid">
-        <a class="brand" href="/">千学网</a>
+        <a class="brand" href="/">编程大赛</a>
         <div class="navbar-text pull-right">
           <a class="btn btn-info" href="/login"> 登录</a>
           <a class="btn btn-info" href="/signup"> 注册</a>
         </div>
         <div class="nav-collapse collapse clearfix">
           <ul class="nav clearfix">
-            <li> <a href="/"> 首页</a></li>
-
-            <li class="active"> <a href="/features/party"> 使用场景</a></li>
-            <li> <a href="/plan"> 功能与价格</a></li>
-            <li> <a href="/blogs"> 团队博客</a></li>
+            <li class="active"><a href="/">首页</a></li>
+            <li><a href="/books">我的教材</a></li>
+            <li><a href="/about">关于我们</a></li>
           </ul>
           </div>  
       </div>
     </div>
-  </div>
+  </header>
   <div class="bg-wrap">
       <%= yield %>
   </div>
 
-  <footer>
+  <footer id="footer">
     <div class="container-fluid">
       <ul class="clearfix">
         <li> <a href="/about"> 关于我们</a></li>
