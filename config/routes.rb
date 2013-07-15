@@ -12,6 +12,11 @@ Qianxue2::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   resources :books
+  # get 'api/books' => 'books#books'
+  # get 'api/books/:id' => 'books#getBookById'
+  namespace :api do
+   resources :books, :defaults => { :format => 'json' }
+  end
 
   # Sample resource route with options:
   #   resources :products do
