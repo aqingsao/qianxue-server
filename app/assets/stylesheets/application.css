@@ -29,7 +29,7 @@
 .bg-wrap {
 	padding-bottom: 10%;
 	min-height: 680px;
-	background: url("/images/bg-wrap.png") repeat;
+	background: url("/assets/bg-wrap.png") repeat;
 	margin-top: -20px;
 }
 .bg-wrap h1 {
