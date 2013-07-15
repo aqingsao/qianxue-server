@@ -28,7 +28,7 @@
             <li> <a href="/plan"> 功能与价格</a></li>
             <li> <a href="/blogs"> 团队博客</a></li>
           </ul>
-          </div>
+          </div>  
       </div>
     </div>
   </div>
@@ -55,6 +55,6 @@
   <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" %>
   <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js" %>
   <%= javascript_include_tag "js/app.js" %>
-
+  <%= yield :scripts%>
 </body>
 </html>
