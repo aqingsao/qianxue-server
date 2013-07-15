@@ -1,5 +1,4 @@
-BookCtrl = ($scope, $http)->
+angular.module('myapp', []).controller("BookCtrl", ($scope, $http)->
   id = 1;
-  $http.get('/api/book/' + id).success (book) =>
-    $scope.book = book;
-  
+  $http.get('/api/books/' + id).success (book) => $scope.book = book;
+)  

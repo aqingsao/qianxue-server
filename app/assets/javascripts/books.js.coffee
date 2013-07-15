@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-BookCtrl = ($scope, $http) ->
+angular.module('myapp', []).controller('BooksCtrl', ($scope, $http) ->
   id = 1;
-  $http.get('/api/book/' + id).success (book) =>
-    $scope.book = book;
+  $http.get('/api/books').success (books) => $scope.books = books;
+)
