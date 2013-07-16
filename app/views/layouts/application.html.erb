@@ -40,9 +40,11 @@
     </div>
   </header>
   <div class="bg-wrap">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="container-fluid">
+      <p class="notice hidden"><%= notice %></p>
+      <p class="alert hidden"><%= alert %></p>
+      <%= yield %>
+    </div>
   </div>
 
   <footer id="footer">
