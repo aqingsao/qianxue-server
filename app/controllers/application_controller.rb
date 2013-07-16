@@ -1,8 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  def index2
-  	  
+  def index
+  end
+  def about
   end
 
 end
