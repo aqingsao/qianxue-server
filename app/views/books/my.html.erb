@@ -1,7 +1,7 @@
 <div class="container-fluid" ng-controller="BooksCtrl">
 	<div class="row-fluid">
 	  <div class="content clearfix">
-	 	  <h1>教材 (<span class='count'>{{books.length}}</span>本)</h1>  	  
+	 	  <h1>我的教材 (<span class='count'>{{books.length}}</span>本)</h1>  	  
 			<ul class="books">
 			  <li class="book" ng-repeat="book in books">
 			  	<div class="pic">
@@ -17,7 +17,8 @@
 			          <span class="subTitle">{{book.subTitle}}</span> 
 			        </a> 
 			      </h2>
-			      <div class="summary">还有1025个人在学习本教材</div> 
+			      <div class="progress">共649个条目，有127个需要复习</div> 
+			      <div class="summary">还有1025个人与您一起复习此书，您复习的总数战胜了87%的人</div> 
 			    </div>
 			  </li>	
 			</ul>

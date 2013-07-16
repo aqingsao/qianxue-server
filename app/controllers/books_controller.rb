@@ -5,6 +5,9 @@ class BooksController < ApplicationController
 	def show
 	end
 
+	def my
+	end
+
 	def review
 	end
 end

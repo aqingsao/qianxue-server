@@ -15,9 +15,16 @@ Qianxue2::Application.routes.draw do
     member do
       get 'review'
     end
+    collection do
+      get 'my'
+    end
   end
   namespace :api do
-   resources :books, :defaults => { :format => 'json' }
+   resources :books, :defaults => { :format => 'json' } do
+    collection do
+      get 'my'
+    end
+   end
   end
 
   # Sample resource route with options:
