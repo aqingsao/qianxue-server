@@ -16,7 +16,12 @@
 		          <span class="subTitle">{{book.subTitle}}</span> 
 		        </a> 
 		      </h2>
-		      <div class="summary">还有1025个人在学习本教材</div> 
+		      <div class="summary">
+		      <% form_for :order do%>
+			      <%= link_to "我要学习", "", :class => "btn btn-info"%>
+			      条目：627个；学习人数：1025个
+		      <% end %>
+		      </div> 
 		    </div>
 		  </li>	
 		</ul>
