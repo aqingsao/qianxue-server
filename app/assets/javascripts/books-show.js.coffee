@@ -1,3 +1,5 @@
+@setActiveNav("nav-my")
+
 bookIdReg = /books\/(\d)/
 angular.module('myapp', []).controller("BookCtrl", ($scope, $http)->
   id = bookIdReg.exec(window.location.href)[1];
