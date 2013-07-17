@@ -29,6 +29,8 @@ Qianxue2::Application.routes.draw do
    end
   end
 
+  resource :plan
+
   # Sample resource route with options:
   #   resources :products do
   #     member do

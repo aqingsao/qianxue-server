@@ -9,6 +9,7 @@
 	      	  </a> 		    	
 		    </div>
 	            
+	            <div class="a"></div>
 		    <div class="info">
 		      <h2 class="profile">
 		      	<a class="title" href="/books/{{book.id}}">
@@ -17,8 +18,8 @@
 		        </a> 
 		      </h2>
 		      <div class="summary">
-		      <% form_for :order do%>
-			      <%= link_to "我要学习", "", :class => "btn btn-info"%>
+		      <%= form_for :plan, url: plan_path do |f|%>
+			      <%= f.submit "我要学习", :class => "btn btn-info"%>
 			      条目：627个；学习人数：1025个
 		      <% end %>
 		      </div> 
