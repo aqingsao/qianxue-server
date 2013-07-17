@@ -1,19 +1,19 @@
-<div class="row-fluid" ng-controller="BooksCtrl">
+<div class="row-fluid" ng-controller="PlansCtrl">
   <div class="content clearfix">
- 	  <h1>我的教材 (<span class='count'>{{books.length}}</span>本)</h1>  	  
+ 	  <h1>我的教材 (<span class='count'>{{plans.length}}</span>本)</h1>  	  
 		<ul class="books">
-		  <li class="book" ng-repeat="book in books">
+		  <li class="book" ng-repeat="plan in plans">
 		  	<div class="pic">
-	      	  <a class="nbg" href="/books/{{book.id}}">
+	      	  <a class="nbg" href="/books/{{plan.book_id}}">
 	      	  	<img src="/assets/zhengzhi_01.png"width="90">
 	      	  </a> 		    	
 		    </div>
 	            
 		    <div class="info">
 		      <h2 class="profile">
-		      	<a class="title" href="/books/{{book.id}}">
-		          <span class="title">{{book.title}}</span> 
-		          <span class="subTitle">{{book.subTitle}}</span> 
+		      	<a class="title" href="/books/{{plan.book_id}}">
+		          <span class="title">{{plan.book.title}}</span> 
+		          <span class="subTitle">{{plan.book.subTitle}}</span> 
 		        </a> 
 		      </h2>
 		      <div class="progress">共649个条目，有127个需要复习</div> 
@@ -24,7 +24,5 @@
   </div>
 </div>
 <% content_for :scripts do %>
-  <%= javascript_include_tag "books-my" %>
+  <%= javascript_include_tag "plans-index" %>
 <% end %>
-
-<% activeTab = 'books-my'%>
