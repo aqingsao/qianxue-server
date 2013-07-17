@@ -42,6 +42,7 @@ gem 'thin'
 group :test do
 	# gem 'rack-test'
 	gem 'rspec'
+	gem 'rspec-rails'
 	gem 'rspec_api_documentation'
 end
 group :development do
