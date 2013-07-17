@@ -39,7 +39,7 @@ gem 'devise'
 
 gem 'thin'
 
-group :test do
+group :test, :development do
 	# gem 'rack-test'
 	gem 'rspec'
 	gem 'rspec-rails'
