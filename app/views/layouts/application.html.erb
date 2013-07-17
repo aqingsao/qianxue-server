@@ -17,8 +17,12 @@
       <div class="container-fluid">
         <a class="brand" href="/">编程大赛</a>
         <div class="navbar-text pull-right">
-          <a class="btn btn-info" href="/login"> 登录</a>
-          <a class="btn btn-info" href="/signup"> 注册</a>
+          <% if user_signed_in? %>
+            <%= link_to('退出', destroy_user_session_path, :method => :delete, :class=>"btn btn-info") %>
+          <% else %>
+            <%= link_to('登录', new_user_session_path, :class=>"btn btn-info")  %>  
+            <%= link_to('注册', new_user_registration_path, :class=>"btn btn-info")  %>  
+          <% end %>
         </div>
         <div class="nav-collapse collapse clearfix">
           <ul class="nav clearfix">
