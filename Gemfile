@@ -44,6 +44,8 @@ group :test, :development do
 	gem 'rspec'
 	gem 'rspec-rails'
 	gem 'rspec_api_documentation'
+ 	gem 'factory_girl'
+	gem 'factory_girl_rails'
 end
 group :development do
 	gem 'pry'
