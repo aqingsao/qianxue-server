@@ -1,0 +1,6 @@
+<% if user_signed_in? %>
+  <%= link_to('退出', destroy_user_session_path, :method => :delete, :class=>"btn btn-info") %>
+<% else %>
+  <%= link_to('登录', new_user_session_path, :class=>"btn btn-info")  %>  
+  <%= link_to('注册', new_user_registration_path, :class=>"btn btn-info")  %>  
+<% end %>
