@@ -6,6 +6,6 @@ class Api::PlansController < ApplicationController
 	end
 
 	def show
-    render json: Plan.find(params[:id])
+    render json: Plan.find(params[:id]), :methods => :remaining_date
 	end
 end
