@@ -15,3 +15,11 @@ e13 = Entry.create(:name=>'predator', :description=>'The polar bear is the bigge
 book2 = Book.create({:title=>'多学习', :subTitle=> '好好学习，天天向上'})
 e11 = Entry.create(:name=>'prey', :description=>'It\'s a prey', :book_id=>book2.id)
 e12 = Entry.create(:name=>'NSA', :description=>'National Security Agency', :book_id=>book2.id)
+
+u1 = User.new(:email=>"1@a.com")
+u1.encrypted_password="$2a$10$khsreO3tPZ2VxQnmFXfjNe/mom0OS9rzphGVGYBkRwvq..."
+u1.save
+
+u2 = User.new(:email=>"2@a.com")
+u2.encrypted_password="$2a$10$khsreO3tPZ2VxQnmFXfjNe/mom0OS9rzphGVGYBkRwvq..."
+u2.save
