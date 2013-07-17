@@ -19,16 +19,16 @@
           <a class="brand" href="/">编程大赛</a>
           <ul class="nav clearfix">
             <li id='nav-home' class="active">
-              <a href="/">首页</a>
+              <%= link_to "首页", root_path %>
             </li>
             <li id='nav-books'>
-              <a href="/books">教材</a>
+              <%= link_to "教材", books_path%>
             </li>
             <li id='nav-my'>
-              <%= link_to "我的教材", my_books_path%>
+              <%= link_to "我的教材", plans_path%>
             </li>
             <li id='nav-about'>
-              <a href="/about">关于我们</a>
+              <%= link_to "关于我们", about_path%>
             </li>
           </ul>
         </div>  
