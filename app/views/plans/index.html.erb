@@ -1,17 +1,17 @@
 <div class="row-fluid" ng-controller="PlansCtrl">
   <div class="content clearfix">
- 	  <h1>我的教材 (<span class='count'>{{plans.length}}</span>本)</h1>  	  
+ 	  <h1>我在学习 (<span class='count'>{{plans.length}}</span>本)</h1>  	  
 		<ul class="books">
 		  <li class="book" ng-repeat="plan in plans">
 		  	<div class="pic">
-	      	  <a class="nbg" href="/books/{{plan.book_id}}">
+	      	  <a class="nbg" href="/plans/{{plan.id}}">
 	      	  	<img src="/assets/zhengzhi_01.png"width="90">
 	      	  </a> 		    	
 		    </div>
 	            
 		    <div class="info">
 		      <h2 class="profile">
-		      	<a class="title" href="/books/{{plan.book_id}}">
+		      	<a class="title" href="/plans/{{plan.id}}">
 		          <span class="title">{{plan.book.title}}</span> 
 		          <span class="subTitle">{{plan.book.subTitle}}</span> 
 		        </a> 
