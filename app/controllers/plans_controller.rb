@@ -1,24 +1,18 @@
 class PlansController < ApplicationController
-	def index
-	end	
-
-	def show
-	end
-
 	def review
 	end
 
 	def create
 		begin
-			book = Book.find(params[:plans][:bookId])
+			noteBook = NoteBook.find(params[:plans][:noteBook_id])
 		rescue
-			logger.warn "Cannot find book with id #{params[:plans][:bookId]}"
-			raise "Cannot find book with id #{params[:plans][:bookId]}"
+			logger.warn "Cannot find noteBook with id #{params[:plans][:noteBook_id]}"
+			raise "Cannot find noteBook with id #{params[:plans][:noteBook]}"
 		end
  
- 		raise "User already choosed book #{book.id} in plan" if current_user.books.include? book
+ 		raise "User already choosed noteBook #{noteBook.id} in plan" if current_user.noteBooks.include? noteBook
 
-		@plan = Plan.create(:book_id => book.id, :user_id=>current_user.id, :due_date=>params[:plans][:dueDate])
+		@plan = Plan.create(:noteBook_id => noteBook.id, :user_id=>current_user.id, :due_date=>params[:plans][:due_date])
 		redirect_to plans_path
 	end
 end

@@ -19,8 +19,8 @@
 		      </h2>
 		      <div class="summary">
 		      <%= form_for :plans, url: plans_path do |f|%>
-						<%= f.hidden_field :bookId, value: "{{noteBook.id}}"%>
-						<%= f.hidden_field :dueDate, value: 30.days.from_now%>
+						<%= f.hidden_field :noteBook_id, value: "{{noteBook.id}}"%>
+						<%= f.hidden_field :due_date, value: 30.days.from_now%>
 			      <%= f.submit "我要学习...", :class => "btn btn-info"%>
 			      条目：627个；学习人数：1025个
 		      <% end %>
