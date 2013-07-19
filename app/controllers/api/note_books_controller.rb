@@ -8,8 +8,4 @@ class Api::NoteBooksController < ApplicationController
 	def show
     render json: NoteBook.find(params[:id])
 	end
-
-	def my
-    render json: NoteBook.all
-	end
 end
