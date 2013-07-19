@@ -13,19 +13,19 @@
 
 ActiveRecord::Schema.define(:version => 20130717023843) do
 
-  create_table "entries", :force => true do |t|
-    t.string   "name"
-    t.string   "description"
-    t.integer  "note_book_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-  end
-
   create_table "note_books", :force => true do |t|
     t.string   "title"
     t.string   "subTitle"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "notes", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "note_book_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "plans", :force => true do |t|
