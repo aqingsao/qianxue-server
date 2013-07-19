@@ -10,6 +10,6 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   has_many :plans
-  has_many :books, :through => :plans
+  has_many :noteBooks, :through => :plans
 
 end

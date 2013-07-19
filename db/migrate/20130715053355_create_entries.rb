@@ -3,7 +3,7 @@ class CreateEntries < ActiveRecord::Migration
     create_table :entries do |t|
       t.string :name
       t.string :description
-      t.integer :book_id
+      t.integer :note_book_id
 
       t.timestamps
     end

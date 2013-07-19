@@ -1,9 +1,9 @@
 class Plan < ActiveRecord::Base
 	after_initialize :default_values
 
-  attr_accessible :due_date, :book_id, :user_id
+  attr_accessible :due_date, :note_book_id, :user_id
   belongs_to :user
-  belongs_to :book
+  belongs_to :noteBook
 
   def remaining_date
   	due_date - Time.now
