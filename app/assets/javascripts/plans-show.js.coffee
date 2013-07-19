@@ -14,5 +14,4 @@ angular.module('myapp', []).controller("PlanCtrl", ($scope, $http)->
   		plan.book = book	
   		console.log(plan.due_date + ", " + plan.remaining_date)
   	$scope.plan = plan
-)  
-
+)

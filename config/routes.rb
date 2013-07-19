@@ -14,7 +14,11 @@ Qianxue2::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   resources :books
-  resources :plans
+  resources :plans do 
+    member do
+      get 'review'
+    end
+  end
 
   namespace :api do
    resources :books, :defaults => { :format => 'json' } 

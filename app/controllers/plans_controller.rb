@@ -5,6 +5,9 @@ class PlansController < ApplicationController
 	def show
 	end
 
+	def review
+	end
+
 	def create
 		begin
 			book = Book.find(params[:plans][:bookId])

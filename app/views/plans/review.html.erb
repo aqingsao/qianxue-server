@@ -1,11 +1,4 @@
 <div class="row-fluid" ng-controller="PlanCtrl">
-	<h1>
-	  <a class="title" href="/books/{{book.id}}">
-			<span class="mainTitle">{{plan.book.title}}</span> 
-	  	<span class="subTitle">{{plan.book.subTitle}}</span> 
-	  </a>
-	</h1> 
-  <div class="content">
 		<div>
 		  距离
 		  <span class="expected-date">{{plan.due_date}}</span> 
@@ -22,7 +15,6 @@
 		<div class="review">
 			<%= link_to "开始复习", review_plan_path(), :class => "btn btn-primary" %>
 		</div>
-	</div>    
 </div>
 <% content_for :scripts do %>
   <%= javascript_include_tag "plans-show" %>
