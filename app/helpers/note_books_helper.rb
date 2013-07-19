@@ -1,2 +1,2 @@
-module BooksHelper
+module NoteBooksHelper
 end
