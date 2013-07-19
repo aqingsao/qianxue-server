@@ -1,4 +1,4 @@
-class Book < ActiveRecord::Base
+class NoteBook < ActiveRecord::Base
   attr_accessible :id, :title, :subTitle
 
   has_many :entries

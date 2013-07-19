@@ -1,6 +1,6 @@
-class CreateBooks < ActiveRecord::Migration
+class CreateNoteBooks < ActiveRecord::Migration
   def change
-    create_table :books do |t|
+    create_table :note_books do |t|
       t.string :title
       t.string :subTitle
 

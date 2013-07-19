@@ -1,7 +1,7 @@
-@setActiveNav("nav-books")
+@setActiveNav("nav-noteBooks")
 
-bookIdReg = /books\/(\d)/
-angular.module('myapp', []).controller("BookCtrl", ($scope, $http)->
+bookIdReg = /noteBooks\/(\d)/
+angular.module('myapp', []).controller("NoteBookCtrl", ($scope, $http)->
   id = bookIdReg.exec(window.location.href)[1];
-  $http.get('/api/books/' + id).success (book) => $scope.book = book;
+  $http.get('/api/noteBooks/' + id).success (noteBook) => $scope.noteBook = noteBook;
 )  

@@ -13,7 +13,7 @@ Qianxue2::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
-  resources :books
+  resources :noteBooks
   resources :plans do 
     member do
       get 'review'
@@ -21,7 +21,7 @@ Qianxue2::Application.routes.draw do
   end
 
   namespace :api do
-   resources :books, :defaults => { :format => 'json' } 
+   resources :noteBooks, :defaults => { :format => 'json' } 
    resources :plans, :defaults => { :format => 'json' } 
   end
 

@@ -1,6 +1,6 @@
-@setActiveNav("nav-books")
+@setActiveNav("nav-noteBooks")
 
-angular.module('myapp', []).controller('BooksCtrl', ($scope, $http) ->
+angular.module('myapp', []).controller('NoteBooksCtrl', ($scope, $http) ->
   id = 1;
-  $http.get('/api/books').success (books) => $scope.books = books;
+  $http.get('/api/noteBooks').success (noteBooks) => $scope.noteBooks = noteBooks;
 )
