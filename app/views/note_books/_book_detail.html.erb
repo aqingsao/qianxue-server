@@ -17,7 +17,12 @@
       <%= f.hidden_field :noteBook_id, value: "{{noteBook.id}}"%>
       <%= f.hidden_field :due_date, value: 30.days.from_now%>
       <%= f.submit "我要学习...", :class => "btn btn-info"%>
-      条目：{{noteBook.notes.length}}个；学习人数：1025个
     <% end %>
+
+    <span ng-if="noteBook.planStatus == 'PLANNED'">
+      您已经在<%= link_to "复习这本笔记了", plan_path(1)%>
+    </span>
+    <span>条目：{{noteBook.notes.length}}个；学习人数：1025个</span>
+
   </div> 
 </div>
