@@ -1,33 +1,7 @@
 <div class="row-fluid" ng-controller="NoteBookCtrl">
-	<div>
-		<h1>
-			<span class="title"></span> 
-	      {{noteBook.title}}
-		</h1> 
+	<div class="book">
+		<%= render 'book_detail' %>
 	</div>
-</div>
-<div class="row-fluid">
-  <div class="content">
-	<div>
-	  距离
-	  <span class="expected-date">2013-12-31</span> 
-	  日，还剩 
-	  <span class="remain-date">49</span>
-	  天
-	</div> 
-	<div class="completion-status">
-	  已完成：0/1000
-	  <span class="status-normal"></span>
-	</div>
-	<div class="index-progress">
-	  <p style="width:1.1279311368358562%"></p>
-	</div>
-	<div class="review">
-	  <a class="btn btn-primary" href="/noteBooks/{{noteBook.id}}/review">
-			开始复习
-	  </a>
-	</div>
-	</div>    
 </div>
 <% content_for :scripts do %>
   <%= javascript_include_tag "note-books-show" %>

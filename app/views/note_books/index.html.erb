@@ -3,29 +3,7 @@
  	  <h1>教材 (<span class='count'>{{noteBooks.length}}</span>本)</h1>  	  
 		<ul class="books">
 		  <li class="book" ng-repeat="noteBook in noteBooks">
-		  	<div class="pic">
-	      	  <a class="nbg" href="/noteBooks/{{noteBook.id}}">
-	      	  	<img src="/assets/zhengzhi_01.png"width="90">
-	      	  </a> 		    	
-		    </div>
-	            
-	      <div class="a"></div>
-		    <div class="info">
-		      <h2 class="profile">
-		      	<a class="title" href="/noteBooks/{{noteBook.id}}">
-		          <span class="title">{{noteBook.title}}</span> 
-		          <span class="subTitle">{{noteBook.subTitle}}</span> 
-		        </a> 
-		      </h2>
-		      <div class="summary">
-		      <%= form_for :plans, url: plans_path do |f|%>
-						<%= f.hidden_field :noteBook_id, value: "{{noteBook.id}}"%>
-						<%= f.hidden_field :due_date, value: 30.days.from_now%>
-			      <%= f.submit "我要学习...", :class => "btn btn-info"%>
-			      条目：{{noteBook.notes.length}}个；学习人数：1025个
-		      <% end %>
-		      </div> 
-		    </div>
+		  	<%= render 'book_detail' %>
 		  </li>	
 		</ul>
   </div>
