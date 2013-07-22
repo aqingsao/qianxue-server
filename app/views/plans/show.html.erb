@@ -1,25 +1,31 @@
 <div class="row-fluid" ng-controller="PlanCtrl">
 	<h1>
+	  <a class="nbg" href="/noteBooks/{{noteBook.id}}">
+	  	<img src="/assets/zhengzhi_01.png"width="90">
+	  </a> 		    	
+
 	  <a class="title" href="/books/{{book.id}}">
-			<span class="mainTitle">{{plan.book.title}}</span> 
+			<span class="mainTitle">{{plan.book.title}}</span>
 	  	<span class="subTitle">{{plan.book.subTitle}}</span> 
 	  </a>
 	</h1> 
-  <div class="content">
+  <div class="lead">
 		<div>
-		  距离
-		  <span class="expected-date">{{plan.due_date.getFullYear()}}年{{plan.due_date.getMonth() + 1}}月{{plan.due_date.getDate()}}日</span> 
-		  完成，还剩 
-		  <span class="remain-date">{{plan.remaining_date}}</span>
+		  距离完成，还剩 
+		  <span class="remain-date"><strong>{{plan.remaining_date}}</strong></span>
 		  天
 		</div> 
 		<div class="completion-status">
 		  完成度：0/1000
 		  <span class="status-normal"></span>
+			<span class="index-progress" style="display: inline-block">
+			  <p style="width:1.1279311368358562%"></p>
+			</span>
 		</div>
-		<div class="index-progress">
-		  <p style="width:1.1279311368358562%"></p>
+		<div>
+		  今日需要复习<strong>12</strong>条笔记
 		</div>
+
 		<div class="review">
 			<%= link_to "开始复习", review_plan_path(), :class => "btn btn-primary" %>
 		</div>
