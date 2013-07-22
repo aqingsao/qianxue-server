@@ -8,12 +8,13 @@
   <div class="content">
 		<div>
 		  距离
-		  <span class="expected-date">{{plan.due_date}}</span> 
-		  日，还剩 
+		  <span class="expected-date">{{plan.due_date.getFullYear()}}年{{plan.due_date.getMonth() + 1}}月{{plan.due_date.getDate()}}日</span> 
+		  完成，还剩 
 		  <span class="remain-date">{{plan.remaining_date}}</span>
+		  天
 		</div> 
 		<div class="completion-status">
-		  已完成：0/1000
+		  完成度：0/1000
 		  <span class="status-normal"></span>
 		</div>
 		<div class="index-progress">
