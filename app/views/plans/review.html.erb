@@ -1,21 +1,18 @@
 <div class="row-fluid" ng-controller="PlanCtrl">
-		<div>
-		  距离
-		  <span class="expected-date">{{plan.due_date}}</span> 
-		  日，还剩 
-		  <span class="remain-date">{{plan.remaining_date}}</span>
-		</div> 
-		<div class="completion-status">
-		  已完成：0/1000
-		  <span class="status-normal"></span>
+		<div class="note">
+			<div class="note-front">
+				<p class="text-center">Shed</p>
+			</div>		
 		</div>
-		<div class="index-progress">
-		  <p style="width:1.1279311368358562%"></p>
-		</div>
-		<div class="review">
-			<%= link_to "开始复习", review_plan_path(), :class => "btn btn-primary" %>
-		</div>
+		<ul class="inline note-actions navbar-fixed-bottom text-center">
+			<li><a class="btn btn-info">不记得了</a></li>
+			<li><a class="btn btn-info">我记得答案</a></li>
+			<li><a class="btn btn-info">太简单了</a></li>
+		</ul>
 </div>
+<% content_for :styles do %>
+  <%= stylesheet_link_tag "plan", :media => "all" %>
+<% end %>  
 <% content_for :scripts do %>
   <%= javascript_include_tag "plans-show" %>
 <% end %>  
