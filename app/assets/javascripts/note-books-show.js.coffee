@@ -8,5 +8,4 @@ angular.module('myapp', []).controller("NoteBookCtrl", ($scope, $http)->
   	$http.get('/api/plans').success (plans) => 
   		for plan in plans
 	  	  noteBook.plan = plan if noteBook.id = plan.noteBook_id
-
 )  

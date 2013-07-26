@@ -10,8 +10,8 @@ angular.module('myapp', []).controller("PlanCtrl", ($scope, $http)->
   	plan.remaining_date = calcDate(plan.remaining_date)
   	plan.due_date = new Date(plan.due_date)
 
-  	$http.get('/api/noteBooks/'+plan.noteBook_id).success (book) =>
-  		plan.book = book
+  	$http.get('/api/noteBooks/'+plan.noteBook_id).success (noteBook) =>
+  		plan.noteBook = noteBook
 
   	$scope.plan = plan
 )

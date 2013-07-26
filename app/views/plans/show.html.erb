@@ -1,12 +1,12 @@
 <div class="row-fluid" ng-controller="PlanCtrl">
 	<h1>
-	  <a class="nbg" href="/noteBooks/{{noteBook.id}}">
+	  <a class="nbg" href="/noteBooks/{{plan.noteBook.id}}">
 	  	<img src="/assets/zhengzhi_01.png"width="90">
 	  </a> 		    	
 	  	
-	  <a class="title" href="/books/{{book.id}}">
-			<span class="mainTitle">{{plan.book.title}}</span>
-	  	<span class="subTitle">{{plan.book.subTitle}}</span> 
+	  <a class="title" href="/noteBooks/{{plan.noteBook.id}}">
+			<span class="mainTitle">{{plan.noteBook.title}}</span>
+	  	<span class="subTitle">{{plan.noteBook.subTitle}}</span> 
 	  </a>
 	</h1>
 
