@@ -2,7 +2,15 @@
 		<div class="note">
 			<div class="note-front">
 				<p class="text-center">Shed</p>
+				<p class="text-center text-info"><small>点击显示答案</small></p>
 			</div>		
+			<div class="note-back hide">
+				<p class="text-center">Shed</p>
+				<hr/>
+				<p>
+					<small>hide in default</small>
+				</p>
+			</div>
 		</div>
 		<ul class="inline note-actions text-center">
 			<li><a class="btn btn-info">不记得了</a></li>
@@ -14,5 +22,5 @@
   <%= stylesheet_link_tag "plan", :media => "all" %>
 <% end %>  
 <% content_for :scripts do %>
-  <%= javascript_include_tag "plans-show" %>
+  <%= javascript_include_tag "plans-review" %>
 <% end %>  
