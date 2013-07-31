@@ -17,5 +17,5 @@ angular.module('myapp', []).controller("PlanCtrl", ($scope, $http)->
 )
 
 $(".note").click ()->
-	$(".note .note-front").hide();
-	$(".note .note-back").show();
+	$(".note .note-front").toggleClass("hide");
+	$(".note .note-back").toggleClass("hide");
