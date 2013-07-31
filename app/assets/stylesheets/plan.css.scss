@@ -1,15 +1,22 @@
 .note{
 	min-height: 361px;
-	margin: 10px 30px;
+	margin: 30px auto;
+	border: 1px solid black;
+	width: 600px;
+	height: 400px;
+	background: url(http://baicizhan.qiniudn.com/pack/assets/words_list_bg.png);
 
 	.note-front{
 		font-size: 35px;
 		margin-top: 170px;
 		width: 100%;
 		height: 100%;
-		border: 1px solid black;
 	}
 
 	.note-actions{
 	}
+}
+
+.plan{
+	font-size: 25px;
 }
