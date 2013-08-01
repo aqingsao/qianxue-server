@@ -1,0 +1,6 @@
+<%= form_for(:review, :url => api_reviews_path()) do |f| %>
+  <%= f.hidden_field :status, {:value=>status} %>
+  <%= f.hidden_field :user_id, {:value=>user_id} %>
+  <%= f.hidden_field :note_id, {:value=>note_id} %>
+  <%= f.submit button, :class=>"btn btn-info" %>
+<% end %>
