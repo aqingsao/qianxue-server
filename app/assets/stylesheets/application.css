@@ -123,3 +123,8 @@ footer .container-fluid ul li a {
 }
 
 /*End of footer*/
+
+/* General*/
+.hide{
+	display: none !important;
+}
