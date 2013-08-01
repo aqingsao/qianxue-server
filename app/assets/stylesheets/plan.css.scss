@@ -1,19 +1,18 @@
 .note{
-	min-height: 361px;
-	margin: 30px auto;
-	border: 1px solid black;
 	width: 600px;
 	height: 400px;
-	position: relative;
+	margin: 30px auto;
+	border: 1px solid black;
+
+	display: table;
+	overflow:hidden;
 	cursor: pointer;
 	background: url(http://baicizhan.qiniudn.com/pack/assets/words_list_bg.png);
 
 	.note-front{
-		position: absolute;
-		top: 150px;
 		font-size: 35px;
-		width: 100%;
-		height: 100%;
+		display:table-cell;
+		vertical-align: middle;
 	}
 	.note-back{
 		font-size: 25px;
