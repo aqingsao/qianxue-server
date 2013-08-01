@@ -13,9 +13,18 @@
 			</div>
 		</div>
 		<ul class="inline note-actions text-center">
+			<li>
+				<%= form_for(:review, :url => api_reviews_path()) do |f| %>
+				  <%= f.hidden_field :status, {:value=>"too_easy"} %>
+				  <%= f.hidden_field :user_id, {:value=>"1"} %>
+				  <%= f.hidden_field :note_id, {:value=>"1"} %>
+				  <%= f.submit "太简单了，灭掉", :class=>"btn btn-info" %>
+				<% end %>	
+			</li>
+			<li><a class="btn btn-info">记不清</a></li>
 			<li><a class="btn btn-info">不记得了</a></li>
-			<li><a class="btn btn-info">我记得答案</a></li>
-			<li><a class="btn btn-info">太简单了</a></li>
+			<li><a class="btn btn-info">糟糕，忘了</a></li>
+			<li><a class="btn btn-info">一点印象也没有了</a></li>
 		</ul>
 </div>
 <% content_for :styles do %>

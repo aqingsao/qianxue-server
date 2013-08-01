@@ -23,6 +23,7 @@ Qianxue2::Application.routes.draw do
   namespace :api do
    resources :noteBooks, :defaults => { :format => 'json' } 
    resources :plans, :defaults => { :format => 'json' } 
+   resources :reviews, :defaults => { :format => 'json' } 
   end
 
   # Sample resource route with options:
