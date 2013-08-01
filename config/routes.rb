@@ -1,3 +1,5 @@
+require 'sidekiq/web'
+
 Qianxue2::Application.routes.draw do
   devise_for :users
 
@@ -64,7 +66,8 @@ Qianxue2::Application.routes.draw do
   # root :to => 'welcome#index'
   root :to => 'application#index'
   get 'about' => 'application#about'
-
+  
+  mount Sidekiq::Web, at: "/sidekiq"
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
