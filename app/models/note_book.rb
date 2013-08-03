@@ -4,4 +4,8 @@ class NoteBook < ActiveRecord::Base
   has_many :notes
   # has_many :plans
   belongs_to :user
+
+  def notesCount
+  	notes.length
+  end
 end

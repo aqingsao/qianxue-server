@@ -7,22 +7,22 @@
 <div class="a"></div>
 <div class="info">
   <h2 class="profile">
-  	<a class="title" href="/noteBooks/{{noteBook.id}}">
+  	<a class="name" href="/noteBooks/{{noteBook.id}}">
       <span class="name">{{noteBook.name}}</span> 
-      <span class="description">{{noteBook.description}}</span> 
     </a> 
+    <span class="description">{{noteBook.description}}</span> 
   </h2>
   <div class="summary">
-    <%= form_for :plans, :url => plans_path, :html=>{:"ng-if"=>"noteBook.plan == undefined"} do |f|%>
+<!--     <%= form_for :plans, :url => plans_path, :html=>{:"ng-if"=>"noteBook.plan == undefined"} do |f|%>
       <%= f.hidden_field :noteBook_id, value: "{{noteBook.id}}"%>
       <%= f.hidden_field :due_date, value: 30.days.from_now%>
       <%= f.submit "我要学习...", :class => "btn btn-info"%>
     <% end %>
-
-    <span ng-if="noteBook.plan != undefined">
+ -->
+<!--     <span ng-if="noteBook.plan != undefined">
       您已经在<%= link_to "复习这本笔记了", "/plans/{{noteBook.plan.id}}"%>
     </span>
-    <span>条目：{{noteBook.notes.length}}个；学习人数：1025个</span>
-
+ -->    
+    <span>条目：{{noteBook.notesCount}}个</span>
   </div> 
 </div>

@@ -55,9 +55,10 @@
 	zoom: 1;
 	color: #666;
 }
-.title .subTitle{
+.profile .description{
 	font-size: 70%;
 	color: #AAA;
+	font-weight: normal;
 }
 
 .index-progress{
