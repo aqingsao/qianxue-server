@@ -1,3 +1,44 @@
-// Place all the styles related to the books controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.noteBooks{
+	list-style: none;
+}
+.noteBook{
+	border-top: 1px dashed #ddd;
+	border-bottom: 1px dashed #ddd;
+	padding: 20px 0 10px;
+
+	.profile{
+		.pic{
+			float: left;
+			margin-right: 20px;
+			height: 90px;
+		}
+
+		.title{
+			overflow: hidden;
+			zoom: 1;
+			color: #666;
+
+			.description{
+				font-size: 70%;
+				color: #AAA;
+				font-weight: normal;
+			}
+		}
+	}
+}
+
+
+
+.index-progress{
+	width: 343px;
+	height: 21px;
+	padding: 3px 5px 0 5px;
+	background: url(http://baicizhan.qiniudn.com/pack/assets/index_progress_box.png);
+	margin-top: 10px;
+}
+.index-progress p{
+	height: 18px;
+	background: url(http://baicizhan.qiniudn.com/pack/assets/index_progress.png);
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+}

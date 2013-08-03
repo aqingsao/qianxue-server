@@ -1,17 +1,23 @@
-<div class="pic">
-	  <a class="nbg" href="/noteBooks/{{noteBook.id}}">
-	  	<img src="/assets/zhengzhi_01.png"width="90">
-	  </a> 		    	
-</div>
-      
-<div class="a"></div>
-<div class="info">
-  <h2 class="profile">
-  	<a class="name" href="/noteBooks/{{noteBook.id}}">
-      <span class="name">{{noteBook.name}}</span> 
+<div class="profile clearfix">
+  <div class="pic">
+    <a href="/noteBooks/{{noteBook.id}}">
+      <img src="/assets/zhengzhi_01.png"width="90">
+    </a>          
+  </div>
+  
+  <h2 class="title">
+    <a class="name" href="/noteBooks/{{noteBook.id}}">
+        <span class="name">{{noteBook.name}}</span> 
     </a> 
     <span class="description">{{noteBook.description}}</span> 
   </h2>
+
+  <span>条目：{{noteBook.notesCount}}个</span>
+  <span>创建时间：{{noteBook.created_at}}</span>
+
+</div>
+      
+<div class="info">
   <div class="summary">
 <!--     <%= form_for :plans, :url => plans_path, :html=>{:"ng-if"=>"noteBook.plan == undefined"} do |f|%>
       <%= f.hidden_field :noteBook_id, value: "{{noteBook.id}}"%>
@@ -23,6 +29,5 @@
       您已经在<%= link_to "复习这本笔记了", "/plans/{{noteBook.plan.id}}"%>
     </span>
  -->    
-    <span>条目：{{noteBook.notesCount}}个</span>
   </div> 
 </div>

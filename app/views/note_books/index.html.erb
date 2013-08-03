@@ -1,13 +1,18 @@
 <div class="row-fluid" ng-controller="NoteBooksCtrl">
   <div class="content clearfix">
  	  <h1>我的笔记本 (共<span class='count'>{{noteBooks.length}}</span>本)</h1>  	  
-		<ul class="books">
-		  <li class="book" ng-repeat="noteBook in noteBooks">
+		<ul class="noteBooks">
+		  <li class="noteBook" ng-repeat="noteBook in noteBooks">
 		  	<%= render 'book_detail' %>
 		  </li>	
 		</ul>
   </div>
 </div>
+
+<% content_for :styles do %>
+  <%= stylesheet_link_tag "note-books", :media => "all" %>
+<% end %>  
+
 <% content_for :scripts do %>
   <%= javascript_include_tag "note-books-index" %>
 <% end %>
