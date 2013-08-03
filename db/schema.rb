@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(:version => 20130801073437) do
   create_table "note_books", :force => true do |t|
     t.string   "title"
     t.string   "subTitle"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -26,14 +27,6 @@ ActiveRecord::Schema.define(:version => 20130801073437) do
     t.integer  "note_book_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
-  end
-
-  create_table "plans", :force => true do |t|
-    t.integer  "noteBook_id"
-    t.integer  "user_id"
-    t.datetime "due_date"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
   end
 
   create_table "reviews", :force => true do |t|

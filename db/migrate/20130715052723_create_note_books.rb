@@ -3,6 +3,7 @@ class CreateNoteBooks < ActiveRecord::Migration
     create_table :note_books do |t|
       t.string :title
       t.string :subTitle
+      t.belongs_to :user
 
       t.timestamps
     end

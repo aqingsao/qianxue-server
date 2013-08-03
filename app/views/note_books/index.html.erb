@@ -1,6 +1,6 @@
 <div class="row-fluid" ng-controller="NoteBooksCtrl">
   <div class="content clearfix">
- 	  <h1>教材 (<span class='count'>{{noteBooks.length}}</span>本)</h1>  	  
+ 	  <h1>我的笔记本 (共<span class='count'>{{noteBooks.length}}</span>本)</h1>  	  
 		<ul class="books">
 		  <li class="book" ng-repeat="noteBook in noteBooks">
 		  	<%= render 'book_detail' %>

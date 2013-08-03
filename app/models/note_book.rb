@@ -1,8 +1,7 @@
 class NoteBook < ActiveRecord::Base
-  attr_accessible :id, :title, :subTitle
+  attr_accessible :id, :title, :subTitle, :user_id
 
   has_many :notes
   has_many :plans
-  has_many :users, :through => :plans
-
+  belongs_to :user
 end
