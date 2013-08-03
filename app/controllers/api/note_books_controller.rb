@@ -9,4 +9,8 @@ class Api::NoteBooksController < ApplicationController
 	def show
     render json: NoteBook.find(params[:id]).as_json(:include=> [:notes=>{:only=>["id"]}])
 	end
+
+	def create
+		NoteBook.create({:name=>params[:noteBook][:name], :description=> params[:noteBook][:description], :user_id=>current_user.id})
+	end
 end
