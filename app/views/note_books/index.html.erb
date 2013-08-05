@@ -10,20 +10,21 @@
 
 		<div class="noteBooks" ng-if="noteBooks.length == 0">
 		  <span class="text-warning">
-		  	目前，您没有任何笔记本，您可以立即：
+		  	目前，您没有任何笔记本，您可以立即创建：
 		  </span>
-		  <%= link_to "创建笔记本...", "", :class=>"btn btn-info", :"ng-click"=>"displayNoteBookForm()", :"ng-hide"=>"noteBookForm.display"%>
-		  <%= form_for :noteBook, :url => api_noteBooks_path, :html=>{:class=>"form-horizontal", :"ng-show"=>"noteBookForm.display"} do |f|%>
+		  <%= link_to "创建笔记本...", "", :class=>"btn btn-info", :"ng-click"=>"displayNoteBookForm()", :"ng-hide"=>"form.display"%>
+		  <%= form_for :noteBook, :url => "", :html=>{:class=>"form-horizontal", :"ng-submit"=>"createNoteBook()", :"ng-show"=>"form.display", :name=>"noteBookForm"} do |f|%>
 	      <div class="control-group">
 	      	<%= f.label :name, "名称：", :class=>"control-label" %>
 			    <div class="controls">
-			    	<%= f.text_field :name, :class=>"form-control", :placeholder=>"名称" %>
+			    	<%= f.text_field :name, :class=>"form-control", :placeholder=>"名称", :"ng-model"=>"form.noteBook.name" %>
+			    	<!-- <span class="error" ng-show="noteBookForm.noteBook[name].$error.required">Required!</span><br> -->
 			    </div>
 			  </div>
 	      <div class="control-group">
 	      	<%= f.label :description, "描述：", :class=>"control-label" %>
 			    <div class="controls">
-			    	<%= f.text_field :description, :class=>"form-control", :placeholder=>"笔记本的描述" %>
+			    	<%= f.text_field :description, :class=>"form-control", :placeholder=>"笔记本的描述", :"ng-model"=>"form.noteBook.description" %>
 			    </div>
 			  </div>
 			  <div class="control-group">

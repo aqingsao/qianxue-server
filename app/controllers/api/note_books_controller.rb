@@ -11,6 +11,8 @@ class Api::NoteBooksController < ApplicationController
 	end
 
 	def create
-		NoteBook.create({:name=>params[:noteBook][:name], :description=> params[:noteBook][:description], :user_id=>current_user.id})
+		logger.info "current user #{current_user}"
+		noteBook = NoteBook.create({:name=>params[:noteBook][:name], :description=> params[:noteBook][:description], :user_id=>current_user.id})
+		render json: noteBook
 	end
 end
