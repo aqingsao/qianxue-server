@@ -1,18 +1,12 @@
 <div class="row-fluid" ng-controller="NoteBooksCtrl">
   <div class="content clearfix">
- 	  <h1>我的笔记本 (共<span class='count'>{{noteBooks.length}}</span>本)</h1>  	  
-
-		<ul class="noteBooks" ng-if="noteBooks.length > 0">
-		  <li class="noteBook" ng-repeat="noteBook in noteBooks">
-		  	<%= render 'book_detail' %>
-		  </li>	
-		</ul>
-
-		<div class="noteBooks" ng-if="noteBooks.length == 0">
-		  <span class="text-warning">
-		  	目前，您没有任何笔记本，您可以立即创建：
-		  </span>
-		  <%= link_to "创建笔记本...", "", :class=>"btn btn-info", :"ng-click"=>"displayNoteBookForm()", :"ng-hide"=>"form.display"%>
+ 	  <h1>我的笔记本</h1>  	  
+		<div class="action">
+			<p>
+				<span ng-if="noteBooks.length > 0">当前您共有<span class='count'>{{noteBooks.length}}</span>个笔记本</span>
+		  	<span class="text-warning" ng-if="noteBooks.length == 0">目前，您没有任何笔记本，您可以立即创建：</span>
+ 	  		<%= link_to "创建笔记本...", "", :class=>"btn btn-info", :"ng-click"=>"displayNoteBookForm()", :"ng-hide"=>"form.display"%>
+			</p>
 		  <%= form_for :noteBook, :url => "", :html=>{:class=>"form-horizontal", :"ng-submit"=>"createNoteBook()", :"ng-show"=>"form.display", :name=>"noteBookForm"} do |f|%>
 	      <div class="control-group">
 	      	<%= f.label :name, "名称：", :class=>"control-label" %>
@@ -35,6 +29,12 @@
 			  </div>
     	<% end %>
 		</div>
+
+		<ul class="noteBooks" ng-if="noteBooks.length > 0">
+		  <li class="noteBook" ng-repeat="noteBook in noteBooks">
+		  	<%= render 'book_detail' %>
+		  </li>	
+		</ul>
   </div>
 </div>
 
