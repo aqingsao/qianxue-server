@@ -1,0 +1,21 @@
+<%= form_for :noteBook, :url => "", :html=>{:class=>"form-horizontal", :"ng-submit"=>"createNoteBook()", :"ng-show"=>"form.display", :name=>"noteBookForm"} do |f|%>
+  <div class="control-group">
+    <%= f.label :name, "名称：", :class=>"control-label" %>
+    <div class="controls">
+      <%= f.text_field :name, :class=>"form-control", :placeholder=>"名称", :"ng-model"=>"form.noteBook.name" %>
+      <!-- <span class="error" ng-show="noteBookForm.noteBook[name].$error.required">Required!</span><br> -->
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :description, "描述：", :class=>"control-label" %>
+    <div class="controls">
+      <%= f.text_field :description, :class=>"form-control", :placeholder=>"笔记本的描述", :"ng-model"=>"form.noteBook.description" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <%= f.submit "创建", :class => "btn btn-info"%>
+      <%= link_to "取消", "", :class=>"btn btn-info", :"ng-click"=>"hideNoteBookForm()"%>
+    </div>
+  </div>
+<% end %>
